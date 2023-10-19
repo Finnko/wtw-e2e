@@ -7,7 +7,7 @@ const baseApiUrl = Cypress.config('baseApiUrl');
 const APIRoute = {
   FILMS: `${baseApiUrl}/films`,
   COMMENTS: `${baseApiUrl}/comments`,
-  // FAVORITES: `${baseApiUrl}/favorite`,
+  FAVORITES: `${baseApiUrl}/favorite`,
   LOGIN: `${baseApiUrl}/login`,
   LOGOUT: `${baseApiUrl}/logout`,
   SIMILAR: '/similar',
@@ -58,7 +58,7 @@ When(/^запрос на получение данных о фильмах за�
   cy.wait('@getFilms');
 });
 
-Given(/^подменяю данные об обычном тестовом фильме$/, () => {
+Given(/^подменяю данные об тестовом фильме$/, () => {
   cy.intercept(
     'GET',
     filmUrl,
@@ -78,7 +78,7 @@ Given(/^подменяю данные об обычном тестовом фи�
   ).as('getComments');
 });
 
-Given(/^подменяю данные о несуществующем тестовом предложении$/, () => {
+Given(/^подменяю данные о несуществующем тестовом фильме$/, () => {
   cy.intercept(
     'GET',
     nonexistentFilmUrl,
@@ -102,14 +102,14 @@ When(/^запрос на получение данных о тестовом ф�
   cy.wait(['@getFilm', '@getSimilar', '@getComments']);
 });
 
-// Given(/^подменяю данные об избранных предложениях$/, () => {
-//   cy.intercept({
-//     method: 'GET',
-//     url: APIRoute.FAVORITES,
-//   }, {
-//     fixture: 'favorites.json',
-//   }).as('getFavorites');
-// });
+Given(/^подменяю данные об избранных фильмах/, () => {
+  cy.intercept({
+    method: 'GET',
+    url: APIRoute.FAVORITES,
+  }, {
+    fixture: 'favorites.json',
+  }).as('getFavorites');
+});
 
 // Given(/^сервер отдаёт пустой список избранных предложений$/, () => {
 //   cy.intercept(
@@ -234,44 +234,44 @@ When(/^запрос на логаут$/, () => {
 //   cy.wait('@deleteFavorite');
 // });
 
-// Given(/^подменяю запрос на отправку отзыва$/, () => {
-//   cy.intercept('POST', firstOfferComentsUrl, {
-//     fixture: 'new-review.json',
-//   })
-//     .as('postReview');
-// });
-//
-// Given(/^отзыв отправляется с задержкой$/, () => {
-//   cy.intercept({
-//     method: 'POST',
-//     url: firstOfferComentsUrl
-//   }, {
-//     statusCode: 201,
-//     delayMs: 500,
-//     fixture: 'new-review.json'
-//   })
-//     .as('postReview');
-// });
+Given(/^подменяю запрос на отправку отзыва$/, () => {
+  cy.intercept('POST', filmCommentsUrl, {
+    fixture: 'new-review.json',
+  })
+    .as('postReview');
+});
 
-// Given(/^сервер не принимает отзывы$/, () => {
-//   cy.intercept({
-//     method: 'POST',
-//     url: firstOfferComentsUrl,
-//   }, {
-//     statusCode: 500,
-//   })
-//     .as('postReview');
-// });
+Given(/^отзыв отправляется с задержкой$/, () => {
+  cy.intercept({
+    method: 'POST',
+    url: filmCommentsUrl
+  }, {
+    statusCode: 201,
+    delayMs: 500,
+    fixture: 'new-review.json'
+  })
+    .as('postReview');
+});
 
-// When(/^запрос на отправку отзыва завершён$/, () => {
-//   cy.wait('@postReview');
-// });
+Given(/^сервер не принимает отзывы$/, () => {
+  cy.intercept({
+    method: 'POST',
+    url: filmCommentsUrl,
+  }, {
+    statusCode: 500,
+  })
+    .as('postReview');
+});
 
-// Then(/^запрос на отправку отзыва отправлен с правильными данными$/, () => {
-//   cy.wait('@postReview')
-//     .its('request.body')
-//     .then(({ comment, rating }) => {
-//       expect(comment).to.eq('Lorem ipsum dolor sit amet, consectetur porta ante.');
-//       expect(rating).to.eq(5);
-//     });
-// });
+When(/^запрос на отправку отзыва завершён$/, () => {
+  cy.wait('@postReview');
+});
+
+Then(/^запрос на отправку отзыва отправлен с правильными данными$/, () => {
+  cy.wait('@postReview')
+    .its('request.body')
+    .then(({ comment, rating }) => {
+      expect(comment).to.eq('Lorem ipsum dolor sit amet, consectetur porta ante.');
+      expect(rating).to.eq(10);
+    });
+});
