@@ -1,0 +1,37 @@
+[
+  {
+    "id": "03c776be-c2b6-415e-b03c-abdd178bb0b6",
+    "name": "Bohemian Rhapsody",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/bohemian_rhapsody.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "d51c1df3-cef7-4496-ba00-04fb3f6cb72f",
+    "name": "Macbeth",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/macbeth.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "13004a95-9737-46ab-b9e0-824f922f2f22",
+    "name": "We need to talk about Kevin",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/we-need-to-talk-about-kevin.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "e9452057-cc6f-4a91-b25a-6d80254480eb",
+    "name": "Orlando",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/orlando.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "f31f723d-0dcb-48b1-8e2c-9017b598a694",
+    "name": "A Star Is Born",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/A_Star_Is_Born.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/dog.mp4",
+    "genre": "Drama"
+  }
+]

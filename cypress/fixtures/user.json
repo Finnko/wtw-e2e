@@ -1,7 +1,6 @@
 {
   "name": "Test user",
   "avatarUrl": "https://13.design.pages.academy/static/avatar/3.jpg",
-  "isPro": false,
   "email": "test-user@gmail.com",
   "token": "token"
   }

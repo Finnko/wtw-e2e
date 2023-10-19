@@ -1,0 +1,37 @@
+[
+  {
+    "id": "c44e1154-0c99-4621-bf4b-536f2f7b3502",
+    "name": "Fantastic Beasts: The Crimes of Grindelwald",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/fantastic-beasts-the-crimes-of-grindelwald.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/dog.mp4",
+    "genre": "Fantasy"
+  },
+  {
+    "id": "03c776be-c2b6-415e-b03c-abdd178bb0b6",
+    "name": "Bohemian Rhapsody",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/bohemian_rhapsody.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "d51c1df3-cef7-4496-ba00-04fb3f6cb72f",
+    "name": "Macbeth",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/macbeth.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "7d2f45a2-4fc2-448a-9625-79daef4b4310",
+    "name": "Aviator",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/aviator.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  },
+  {
+    "id": "13004a95-9737-46ab-b9e0-824f922f2f22",
+    "name": "We need to talk about Kevin",
+    "previewImage": "https://13.design.pages.academy/static/film/preview/we-need-to-talk-about-kevin.jpg",
+    "previewVideoLink": "https://13.design.pages.academy/static//film/video/traffic.mp4",
+    "genre": "Drama"
+  }
+]

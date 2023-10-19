@@ -32,6 +32,11 @@ When(/^кликаю на элемент '(.*)'$/, (selector) => {
   cy.get(selector).click();
 });
 
+When(/^кликаю на первый элемент в коллекции '(.*)'$/, (selector) => {
+  cy.get(selector).eq(0).click();
+});
+
+
 When(/^навожу курсор на элемент '(.*)'$/, (selector) => {
   cy.get(selector).trigger('mouseenter');
   cy.get(selector).trigger('mouseover');
@@ -50,27 +55,3 @@ When(/^в поле '(.*)' ввожу текст '(.*)'$/, (selector, text) => {
   cy.get(selector).type(text);
 });
 
-let randomCity;
-const citySet = new Set();
-Given(/^запоминаю случайный город$/, () => {
-  cy
-    .get('.locations__item-link')
-    .then(($link) => {
-      randomCity = $link[0].textContent;
-      citySet.add(randomCity);
-    });
-});
-
-Then(/^выбран случайный город$/, () => {
-  cy
-    .get('.tabs__item--active')
-    .should('have.text', randomCity)
-    .then(() => {
-      markerRect = undefined;
-    });
-});
-
-Then(/^города были случайны$/, () => {
-  expect(citySet.size).to.be.greaterThan(1);
-  citySet.clear();
-});

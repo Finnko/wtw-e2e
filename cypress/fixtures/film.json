@@ -1,0 +1,21 @@
+{
+  "id": "7d2f45a2-4fc2-448a-9625-79daef4b4310",
+  "name": "Aviator",
+  "posterImage": "https://13.design.pages.academy/static/film/poster/Aviator.jpg",
+  "backgroundImage": "https://13.design.pages.academy/static/film/background/Aviator.jpg",
+  "backgroundColor": "#D6CDAF",
+  "videoLink": "https://13.design.pages.academy/static/film/video/matrix.mp4",
+  "description": "A biopic depicting the early years of legendary Director and aviator Howard Hughes' career from the late 1920s to the mid 1940s.",
+  "rating": 9.8,
+  "scoresCount": 307174,
+  "director": "Martin Scorsese",
+  "starring": [
+    "Leonardo DiCaprio",
+    "Cate Blanchett",
+    "Kate Beckinsale"
+  ],
+  "runTime": 170,
+  "genre": "Drama",
+  "released": 2014,
+  "isFavorite": false
+}
