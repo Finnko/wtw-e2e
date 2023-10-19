@@ -27,18 +27,8 @@ Then(/^элемент '(.*)' не содержит класс '(.*)'$/, (selecto
   cy.get(selector).should('not.have.class', cssClass);
 });
 
-Then(/^на странице '(.*)' карточек$/, (count) => {
-  cy.get('.place-card')
-    .should('have.length', count);
-});
-
-Then(/^на карте '(.*)' синих маркеров$/, (count) => {
-  cy.get('.map [src$="pin.svg"]')
-    .should('have.length', count);
-});
-
-Then(/^на карте '(.*)' оранжевых маркеров$/, (count) => {
-  cy.get('.map [src$="pin-active.svg"]')
+Then(/^на странице '(.*)' фильмов$/, (count) => {
+  cy.get('.small-film-card')
     .should('have.length', count);
 });
 
@@ -75,8 +65,4 @@ Then(/^элемент '(.*)' не выбран$/, (selector) => {
 
 Then(/^значение поля '(.*)' равно '(.*)'$/, (selector, value) => {
   cy.get(selector).should('have.value', value);
-});
-
-Then(/^на странице '(.*)' города$/, (count) => {
-  cy.get('.favorites__locations-items').should('have.length', count);
 });
